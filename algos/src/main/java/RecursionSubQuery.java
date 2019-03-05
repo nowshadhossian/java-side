@@ -25,13 +25,16 @@ public class RecursionSubQuery {
     List<String> results = new ArrayList<>();
 
     public static void main(String []a){
-        new RecursionSubQuery().recursionSubQuery();
+        new RecursionSubQuery().thirdWay();
     }
 
     List<List<Integer>> possibilites = new ArrayList<>();
 
 
-    public void de2(){
+    /**
+     * iterative
+     */
+    public void firstWay(){
         List<String> strings = new ArrayList<>();
         strings.add("A");
         strings.add("B");
@@ -39,6 +42,30 @@ public class RecursionSubQuery {
 
         subQuery(strings);
 
+    }
+
+
+    public void thirdWay(){
+        List<String> strings = new ArrayList<>();
+        strings.add("A");
+        strings.add("B");
+        strings.add("C");
+
+        recursiveSecondStyle(String.join("", strings), "");
+    }
+
+    private void recursiveSecondStyle(String str, String ans) {
+        if(str.length() == 0){
+            System.out.print(ans + " ");
+            return;
+        }
+
+        for(int i=0; i< str.length(); i++){
+            char a = str.charAt(i);
+            String remaining = str.substring(0, i) + str.substring(i +1);
+            recursiveSecondStyle(remaining, ans + a);
+
+        }
     }
 
 
@@ -72,7 +99,7 @@ public class RecursionSubQuery {
 
 
     Set<String> answers = new HashSet<>();
-   public void recursionSubQuery(){
+   public void secondWay(){
        List<String> strings = new ArrayList<>();
        strings.add("A");
        strings.add("B");
