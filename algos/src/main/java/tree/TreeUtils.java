@@ -12,10 +12,10 @@ public class TreeUtils {
     }
 
     private static void makeTree(Node current, int value){
-        if(current.value > value){
+        if(current.data > value){
             Node left = new Node(value);
             current.left = left;
-        } else if(current.value < value){
+        } else if(current.data < value){
             Node right = new Node(value);
             current.right = right;
         }
@@ -27,9 +27,9 @@ public class TreeUtils {
         if(node == null){
             return null;
         }
-        if(node.value == value){
+        if(node.data == value){
             return node;
-        } else if(node.value > value){
+        } else if(node.data > value){
             dfs(node.left, value);
         } else {
             dfs(node.right, value);
@@ -41,9 +41,9 @@ public class TreeUtils {
         if(node == null){
             return null;
         }
-        if(node.value == value){
+        if(node.data == value){
             return node;
-        } else if(node.value > value){
+        } else if(node.data > value){
             dfs(node.left, value);
         } else {
             dfs(node.right, value);

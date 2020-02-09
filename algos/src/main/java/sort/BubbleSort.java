@@ -30,8 +30,7 @@ public class BubbleSort {
                     input[j + 1] = temp;
                 }
             }
-            Arrays.stream(input).forEach(e -> System.out.print(e + " "));
-            System.out.println("");
+
 
         }
         Arrays.stream(input).forEach(e -> System.out.print(e + " "));
