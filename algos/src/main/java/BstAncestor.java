@@ -6,7 +6,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 3 test case didn't match
+ * 1 test case didn't match
  * https://www.hackerrank.com/challenges/binary-search-tree-lowest-common-ancestor/problem
  */
 
@@ -21,15 +21,15 @@ public class BstAncestor {
         for(int i=0; i< inp.length; i++){
             node = insert(node, inp[i]);
         }
-        Node ans = lca(node, 1, 7);
+        Node ans = lca(node, 2, 3);
         System.out.println(ans.data);
 
     }
     public static Node lca(Node root, int v1, int v2) {
         // Write your code here.
-        List<Node> v1Parents = search(root, v1);
-        List<Node> v2Parents = search(root, v2);
-
+        List<Node> v1Parents = new ArrayList<>(search(root, v1));
+        parents.clear();
+        List<Node> v2Parents = new ArrayList<>(search(root, v2));
 
         for(int i = v1Parents.size()-1; i >= 0; i--){
             for(int j = v2Parents.size() - 1; j >=0; j--){
