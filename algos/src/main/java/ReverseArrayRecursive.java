@@ -1,4 +1,5 @@
 class ReverseArrayRecursive{
+   static int i =0;
  // Complete the reverseArray function below.
     static int[] reverseArray(int[] a) {
         if(i == a.length /2){
