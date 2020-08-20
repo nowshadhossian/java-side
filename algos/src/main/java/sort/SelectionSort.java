@@ -5,6 +5,7 @@ import java.util.Arrays;
 /**
  * Select an element and find smallest element at right and swap.
  * Then move to next postion. Left side will be swapped
+ * https://www.geeksforgeeks.org/selection-sort/
  */
 public class SelectionSort {
     public static void main(String []arg){
