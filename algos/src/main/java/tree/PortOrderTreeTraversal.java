@@ -1,3 +1,7 @@
+package main.java.tree;
+
+import java.util.Stack;
+
 /**
  *https://www.hackerrank.com/challenges/tree-postorder-traversal/problem
     1
@@ -12,7 +16,16 @@
  Output: 4 3 6 5 2 1 
  can't use stack.size() in for loop. size was reducing while pop and printed only 3 times. int len = stack.size(); fixed issue
  */
+
+
 class PortOrderTreeTraversal{
+    class Node
+    {
+        int data;
+        Node left, right;
+
+    }
+
    public static void postOrder(Node root) {
         Stack<Integer> stack = new Stack<>();
         traverse(stack, root);

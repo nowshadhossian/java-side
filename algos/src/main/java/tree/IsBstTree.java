@@ -1,3 +1,5 @@
+import main.java.tree.Node;
+
 /**
 * A duplicate is not BST.
 * Binary search tree. Left side has to be less than right side. Can have on children
