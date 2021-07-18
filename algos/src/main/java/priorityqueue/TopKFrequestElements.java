@@ -7,6 +7,8 @@ import java.util.*;
  * Input: nums = [1,1,1,2,2,3], k = 2
  * Output: [1,2]
  * Using PriorityQueue to solve frequent count. CHeck PriorityQueue comparable method, the magic happens
+ * Time: O(N Log K)
+ * Space: O(N + k)
  */
 public class TopKFrequestElements {
 
